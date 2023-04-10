@@ -1,5 +1,4 @@
-package package2;
-
+package TUGAS1_PBO;
 public class Login {
 
     private String username_user,password_user,

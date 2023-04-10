@@ -1,20 +1,22 @@
-package package2;
+package TUGAS1_PBO;
 
-import package2.Login;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Main {
     public static void main (String [] args) throws Exception {
+//        deklarasi
         String user, password;
         int check = 2;
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+        int menu_resto;
+//        new object
+        Scanner scanner = new Scanner(System.in);
         Login user1 = new Login();
+        RestaurantCRUD restaurant = new RestaurantCRUD();
+
         do {
             System.out.println("=========== Login ==========");
-            System.out.print("| masukan username : ");user = br.readLine();
-            System.out.print("| masukan password : ");password = br.readLine();
+            System.out.print("| masukan username : ");user = scanner.nextLine();
+            System.out.print("| masukan password : ");password = scanner.nextLine();
             System.out.println("============================");
 
 
@@ -23,7 +25,14 @@ public class Main {
                 if (user.equals(user1.getUsername_user())) {
                     System.out.println("halo user");
                 } else if (user.equals(user1.getUsername_admin())) {
-                    System.out.println("halo admin");
+                    restaurant.MenuRestaurant();
+                    System.out.println("Masukan opsi yang anda inginkan ? : ");
+                    menu_resto = scanner.nextInt();
+
+                        switch (menu_resto){
+                            case 2 :
+                                restaurant.addRestaurant();
+                        }
                 }
             }else{
                 System.out.println("* Username/Password salah!*");
