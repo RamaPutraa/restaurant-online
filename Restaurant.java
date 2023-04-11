@@ -6,13 +6,14 @@ public class Restaurant {
     private String nama;
     private String alamat;
 
-    public Restaurant(int id, String nama, String alamat){
+    public Restaurant(int id, String nama, String alamat) {
         this.id = id;
         this.nama = nama;
         this.alamat = alamat;
     }
 
     public int getId() {
+        setId(id);
         return id;
     }
 
@@ -21,6 +22,7 @@ public class Restaurant {
     }
 
     public String getNama() {
+        setNama(nama);
         return nama;
     }
 
@@ -29,10 +31,19 @@ public class Restaurant {
     }
 
     public String getAlamat() {
+        setAlamat(alamat);
         return alamat;
     }
 
     public void setAlamat(String alamat) {
         this.alamat = alamat;
+    }
+
+    @Override
+    public String toString() {
+        return "Restaurant || " +
+                "id= " + id + ' ' +
+                ", nama=" + nama + ' ' +
+                ", alamat=" + alamat + ' ';
     }
 }
