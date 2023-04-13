@@ -56,9 +56,12 @@ public class Main {
                                 restaurant.addRestaurant();
                                 break;
                             case 3:
-                                restaurant.removeRestaurant();
+                                //asdasd
                                 break;
                             case 4:
+                                restaurant.removeRestaurant();
+                                break;
+                            case 5:
                                 loggiedin = false;
                                 break;
                         }

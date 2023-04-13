@@ -10,8 +10,9 @@ public class Admin {
         System.out.println("======== MENU ADMIN ========");
         System.out.println("| 1. Lihat Restaurant       ");
         System.out.println("| 2. Tambah Restaurant      ");
-        System.out.println("| 3. Hapus Restauran        ");
-        System.out.println("| 4. Login Ulang            ");
+        System.out.println("| 3. Tambah Menu            ");
+        System.out.println("| 4. Hapus Restauran        ");
+        System.out.println("| 5. Login Ulang            ");
         System.out.println("============================");
     }
 
