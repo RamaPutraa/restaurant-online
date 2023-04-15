@@ -12,6 +12,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Login user1 = new Login();
         Admin restaurant = new Admin();
+        Admin menu = new Admin();
         Order order = new Order();
         boolean loggiedin = false;
 
@@ -33,7 +34,7 @@ public class Main {
                         menu_order = scanner.nextInt();
                         switch (menu_order){
                             case 1:
-                                restaurant.viewRestaurant();
+                                restaurant.viewMenu();
                                 break;
                             case 2:
                                 loggiedin = false;
@@ -45,7 +46,7 @@ public class Main {
                 } else if (user.equals(user1.getUsername_admin())) {
                     do {
                         restaurant.MenuAdmin();
-                        System.out.print("Masukan opsi yang anda inginkan ? : ");
+                        System.out.print("Masukan opsi yang anda inginkan : ");
                         menu_resto = scanner.nextInt();
 
                         switch (menu_resto) {
@@ -56,12 +57,9 @@ public class Main {
                                 restaurant.addRestaurant();
                                 break;
                             case 3:
-                                //asdasd
-                                break;
-                            case 4:
                                 restaurant.removeRestaurant();
                                 break;
-                            case 5:
+                            case 4:
                                 loggiedin = false;
                                 break;
                         }

@@ -1,5 +1,7 @@
 package TUGAS1_PBO;
 
+import java.util.ArrayList;
+
 public class Restaurant {
 
     private int id;
@@ -42,8 +44,8 @@ public class Restaurant {
     @Override
     public String toString() {
         return "Restaurant || " +
-                "id= " + id + ' ' +
                 ", nama=" + nama + ' ' +
                 ", alamat=" + alamat + ' ';
     }
+
 }

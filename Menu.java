@@ -4,64 +4,50 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
-
-    private static Scanner scanner = new Scanner(System.in);
-
-    private int id_restaurant,harga_makanan,harga_minuman;
-    private String makanan,minuman;
-    public Menu(int id_restaurant, int harga_makanan, int harga_minuman, String makanan, String minuman){
-        this.id_restaurant = id_restaurant;
-        this.makanan = makanan;
-        this.minuman = minuman;
-        this.harga_makanan = harga_makanan;
-        this.harga_minuman = harga_minuman;
+    String nama;
+    double harga;
+    int id;
+    public Menu (int id, String nama, double harga){
+        this.id = id;
+        this.nama = nama;
+        this.harga = harga;
+    }
+    //kelass makanan
+    public void MenuMakanan(String nama, double harga){
+        this.nama = nama;
+        this.harga = harga;
     }
 
-    public static Scanner getScanner() {
-        return scanner;
+    public void MenuMinuman(String nama, double harga){
+        this.nama = nama;
+        this.harga = harga;
     }
 
-    public static void setScanner(Scanner scanner) {
-        Menu.scanner = scanner;
+    public int getId() {
+        return id;
     }
 
-    public int getId_restaurant() {
-        return id_restaurant;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setId_restaurant(int id_restaurant) {
-        this.id_restaurant = id_restaurant;
+    public String getNama() {
+        return nama;
     }
 
-    public int getHarga_makanan() {
-        return harga_makanan;
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 
-    public void setHarga_makanan(int harga_makanan) {
-        this.harga_makanan = harga_makanan;
+    public double getHarga() {
+        return harga;
     }
 
-    public int getHarga_minuman() {
-        return harga_minuman;
+    public void setHarga(double harga) {
+        this.harga = harga;
     }
-
-    public void setHarga_minuman(int harga_minuman) {
-        this.harga_minuman = harga_minuman;
-    }
-
-    public String getMakanan() {
-        return makanan;
-    }
-
-    public void setMakanan(String makanan) {
-        this.makanan = makanan;
-    }
-
-    public String getMinuman() {
-        return minuman;
-    }
-
-    public void setMinuman(String minuman) {
-        this.minuman = minuman;
+    public String toString() {
+        return "Menu : " +
+                nama + " || Rp." + harga;
     }
 }
