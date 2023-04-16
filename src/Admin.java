@@ -1,5 +1,3 @@
-package TUGAS1_PBO;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,7 +15,7 @@ public class Admin {
         System.out.println("============================");
     }
 
-//    add restaurant
+    //    add restaurant
     public static void addRestaurant() {
         System.out.print("Masukan Id Restaurant : ");
         int id = scanner.nextInt();
@@ -61,7 +59,7 @@ public class Admin {
 
 
     }
-//    view retaurant
+    //    view retaurant
     public static void viewRestaurant(){
         if(restaurants.size() > 0 ){
             for(int i = 0; i < restaurants.size(); i++){
@@ -105,6 +103,4 @@ public class Admin {
             System.out.println("Id restaurant tidak ditemukan!");
         }
     }
-
-
 }

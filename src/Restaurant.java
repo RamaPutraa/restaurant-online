@@ -1,7 +1,3 @@
-package TUGAS1_PBO;
-
-import java.util.ArrayList;
-
 public class Restaurant {
 
     private int id;

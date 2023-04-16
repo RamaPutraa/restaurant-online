@@ -1,8 +1,7 @@
-package TUGAS1_PBO;
 public class Login {
 
     private String username_user,password_user,
-                  username_admin,password_admin;
+            username_admin,password_admin;
 
     public Login(){
         username_user = "akuuser";

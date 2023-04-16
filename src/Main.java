@@ -1,10 +1,7 @@
-package TUGAS1_PBO;
-
 import java.util.Scanner;
 
 public class Main {
-    public static void main (String [] args) throws Exception {
-//        deklarasi
+    public static void main(String[] args) {
         String user, password;
         int menu_resto;
         int menu_order;

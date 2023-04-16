@@ -1,13 +1,8 @@
-package TUGAS1_PBO;
-
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Menu {
     String nama;
     double harga;
     int id;
-    public Menu (int id, String nama, double harga){
+    public Menu(int id, String nama, double harga){
         this.id = id;
         this.nama = nama;
         this.harga = harga;
