@@ -10,7 +10,6 @@ public class Main {
         Login user1 = new Login();
         Admin restaurant = new Admin();
         Admin menu = new Admin();
-        Order order = new Order();
         boolean loggiedin = false;
 
         while(loggiedin == false) {
@@ -25,8 +24,12 @@ public class Main {
                 loggiedin = true;
                 if (user.equals(user1.getUsername_user())) {
                     do {
-                        order.MenuOrder();
-
+                        System.out.println("======== MENU CUSTOMER ========");
+                        System.out.println("| 1. Order                     ");
+                        System.out.println("| 2. Lihat Orderan             ");
+                        System.out.println("| 3. Login Ulang               ");
+                        System.out.println("| 4. Logout                    ");
+                        System.out.println("===============================");
                         System.out.print("Masukan opsi yang anda inginkan ? ");
                         menu_order = scanner.nextInt();
                         switch (menu_order){
@@ -34,7 +37,14 @@ public class Main {
                                 restaurant.viewMenu();
                                 break;
                             case 2:
+
+                                break;
+                            case 3:
                                 loggiedin = false;
+                                break;
+                            case 4:
+                                System.out.println("Anda berhasil logout!");
+                                System.exit(0);
                                 break;
                         }
                         String pesan = (loggiedin == false) ? "Login ulang ? (1 = Tidak/ 2 = Iya) : " : "Apakah anda ingin memilih menu lain? (1 = iya /2 = tidak) : ";
@@ -58,6 +68,10 @@ public class Main {
                                 break;
                             case 4:
                                 loggiedin = false;
+                                break;
+                            case 5:
+                                System.out.println("Anda berhasil logout!");
+                                System.exit(0);
                                 break;
                         }
                         String pesan = (loggiedin == false) ? "Login ulang ? (1 = Tidak/ 2 = Iya) : " : "Apakah anda ingin memilih menu lain? (1 = iya /2 = tidak) : ";
