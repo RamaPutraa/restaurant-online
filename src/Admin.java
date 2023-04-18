@@ -61,7 +61,7 @@ public class Admin {
     public static void viewMenu(){
         System.out.println("==== RESTAURANT ====");
         for(String namarestaurant : restaurants.keySet()) {
-            System.out.println(namarestaurant + " || " + restaurants.get(namarestaurant).getAlamat());
+            System.out.println("Nama Restoran : " + namarestaurant + " || Alamat : " + restaurants.get(namarestaurant).getAlamat());
         }
         System.out.print("Masukan nama restaurant : ");
         String pilih_restaurant = scanner.next();
