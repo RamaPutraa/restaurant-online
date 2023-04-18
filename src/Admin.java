@@ -8,6 +8,7 @@ public class Admin {
     public static ArrayList<Order> orders = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
     static void MenuAdmin(){
+        System.out.println("\n");
         System.out.println("======== MENU ADMIN ========");
         System.out.println("| 1. Lihat Restaurant       ");
         System.out.println("| 2. Tambah Restaurant      ");
@@ -31,7 +32,7 @@ public class Admin {
 
         String inputMenu = "";
         while (!inputMenu.equals("selesai")){
-            System.out.print("Masukan menu (format: menuName|menuPrice) enter, lalu ketik \"selesai\" untuk selesai: ");
+            System.out.print("Masukan menu (format: Nama menu|Harga menu) enter, lalu ketik \"selesai\" untuk selesai: ");
             inputMenu = scanner.next();
             if(!inputMenu.equals("selesai")){
                 String[] menuData = inputMenu.split("\\|");
@@ -40,6 +41,7 @@ public class Admin {
         }
         restaurants.put(nama,restaurant);
         System.out.println("Tambah restaurant berhasil!");
+        System.out.println("\n");
     }
 
 
@@ -70,7 +72,8 @@ public class Admin {
         Order newOrder = new Order(res);
         String menu = "";
         while(!menu.equals("2")){
-            System.out.println("==== "+ res.getNama() + " ====");
+            System.out.println("\n");
+            System.out.println("==== Restaurant "+ res.getNama() + " ====");
             System.out.println("Menu : ");
             int nomorMenu = 1;
             for (Menu menu1 : res.getMenus()){
@@ -84,7 +87,7 @@ public class Admin {
             scanner.nextLine();
 
             newOrder.addMenu(res.getMenus().get(indexMenu - 1), jumlah_beli);
-
+            System.out.println("\n");
             System.out.print("Tambah menu lagi?  (1 = iya / 2 = tidak) : ");
             menu = scanner.next();
         }
@@ -94,16 +97,31 @@ public class Admin {
         newOrder.setDistance(jarak);
         orders.add(newOrder);
         System.out.println("Order menu berhasil!");
+        System.out.println("\n");
+    }
 
+    public static void viewOrder(){
+        System.out.println("===== ORDERS =====");
+        for(int i = 0; i<orders.size(); i++){
+            Order order = orders.get(i);
+            System.out.println((i+1) + ". " +order.getRestaurant().getNama());
+            System.out.println("Menu : ");
+            for(Menu menu : order.getMenus().keySet()){
+                System.out.println("- " +menu.getNama() + " , Harga/satuan : "+ menu.getHarga() + " || [" + order.getMenus().get(menu) + " Porsi]");
+            }
+            System.out.println("- Ongkir 1.000/km || Jarak : "+order.getDistance()+" km");
+            System.out.println("- Total Bayar : "+order.getTotalPrice());
+        }
     }
 
     public static void removeRestaurant(){
+        System.out.println("==== RESTAURANT ====");
         for(String namaRestaurant : restaurants.keySet()){
             System.out.println("ID Restaurant : " + restaurants.get(namaRestaurant).getId()
                     + " || Nama : " + namaRestaurant + " || Alamat : " +restaurants.get(namaRestaurant).getAlamat());
         }
         System.out.println("==============================");
-        System.out.println("Masukan nama restaurant : ");
+        System.out.print("Masukan nama restaurant : ");
         String namaRestaurant = scanner.next();
         if(restaurants.containsKey(namaRestaurant)){
             restaurants.remove(namaRestaurant);

@@ -34,7 +34,7 @@ public class Order {
         for (Menu menu : this.menus.keySet()) {
             totalPrice += menu.getHarga() * this.menus.get(menu);
         }
-        totalPrice += this.distance * 1000; // assume delivery cost is 1000 per km
+        totalPrice += this.distance * 1000;
         return totalPrice;
     }
 

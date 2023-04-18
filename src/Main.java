@@ -17,7 +17,7 @@ public class Main {
             System.out.print("| masukan username : ");user = scanner.next();
             System.out.print("| masukan password : ");password = scanner.next();
             System.out.println("============================");
-
+            System.out.println("\n");
 
             if (user.equals(user1.getUsername_user()) && password.equals(user1.getPassword_user()) || user.equals(user1.getUsername_admin()) && password.equals(user1.getPassword_admin())) {
                 int ulang;
@@ -32,12 +32,13 @@ public class Main {
                         System.out.println("===============================");
                         System.out.print("Masukan opsi yang anda inginkan ? ");
                         menu_order = scanner.nextInt();
+                        System.out.println("\n");
                         switch (menu_order){
                             case 1:
                                 restaurant.viewMenu();
                                 break;
                             case 2:
-
+                                restaurant.viewOrder();
                                 break;
                             case 3:
                                 loggiedin = false;
@@ -55,7 +56,7 @@ public class Main {
                         restaurant.MenuAdmin();
                         System.out.print("Masukan opsi yang anda inginkan : ");
                         menu_resto = scanner.nextInt();
-
+                        System.out.println("\n");
                         switch (menu_resto) {
                             case 1:
                                 restaurant.viewRestaurant();
