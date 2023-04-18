@@ -4,6 +4,14 @@ Setiawan Rama Putra 2205551127
 
 Program ini merupakan sebuah program sederhana yang membuat suatu program memesan makanan di restoran secara online. Yang menerima input dan output berbasis Command Promt dengan menggunakan program bahasa Java.
 
+## UML
+
+UML (Unified Modeling Language) class diagram adalah sebuah diagram yang digunakan untuk memodelkan struktur dari sebuah sistem berbasis objek, dengan menunjukkan kelas-kelas yang ada dalam sistem, atribut-atribut yang dimiliki oleh kelas-kelas tersebut, serta hubungan antara kelas-kelas tersebut.
+
+Berikut merupakan contoh dari UML Class Diagram pada Restoran Sederhana
+
+![UML](/img/UML.png "UML")
+
 ## Alur Program
 
 Berikut merupakan langkah-langkah dari menggunakan program tersebut.
